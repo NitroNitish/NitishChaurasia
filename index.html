@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nitish Chaurasia — AI Generalist & Entrepreneur</title>
+  <meta name="description" content="Nitish Chaurasia — AI Generalist, Automation Architect, SaaS Builder, and Entrepreneur. Building intelligent products that matter." />
+  <meta name="keywords" content="AI, Automation, SaaS, Entrepreneur, Portfolio, Nitish Chaurasia" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">NC<span class="logo-dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#journey">Journey</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Let's Build</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-orbs">
+      <div class="orb orb-purple"></div>
+      <div class="orb orb-teal"></div>
+      <div class="orb orb-red"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-pill anim-fade-up" style="--delay:0.3s">
+        <span class="pill-dot"></span> Available for projects
+      </div>
+
+      <h1 class="hero-heading">
+        <span class="anim-fade-up" style="--delay:0.5s">Your</span>
+        <span class="hero-name anim-fade-up" style="--delay:0.7s">Nitish Chaurasia.</span>
+      </h1>
+
+      <div class="hero-roles anim-fade-up" style="--delay:0.9s">
+        <span class="role-pill">AI Generalist</span>
+        <span class="role-pill">Automation Architect</span>
+        <span class="role-pill">SaaS Builder</span>
+        <span class="role-pill">Robotics</span>
+        <span class="role-pill">Entrepreneur</span>
+        <span class="role-pill">Product Dev</span>
+        <span class="role-pill">UI/UX</span>
+      </div>
+
+      <p class="hero-desc anim-fade-up" style="--delay:1.0s">
+        I design and build <strong>AI-powered products</strong>, automate complex workflows, and ship <strong>SaaS tools</strong> that solve real problems. From concept to code — fast, thoughtful, and intentional.
+      </p>
+
+      <div class="hero-ctas anim-fade-up" style="--delay:1.1s">
+        <a href="#projects" class="btn btn-primary">View My Work →</a>
+        <a href="#contact" class="btn btn-secondary">Let's Build Something</a>
+      </div>
+    </div>
+
+    <div class="hero-bottom">
+      <div class="scroll-indicator anim-fade-up" style="--delay:1.3s">
+        <span>Scroll to explore</span>
+        <div class="scroll-line"></div>
+      </div>
+
+      <div class="hero-stats anim-fade-up" style="--delay:1.5s">
+        <div class="stat">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">30+</span>
+          <span class="stat-label">Automations</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">SaaS Products</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee Strip -->
+  <section class="marquee-strip">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>🤖 AI Solutions</span>
+        <span>⚡ n8n Automation</span>
+        <span>📦 SaaS Products</span>
+        <span>🌐 Web & Apps</span>
+        <span>🦾 Robotics</span>
+        <span>🎨 UI/UX Design</span>
+        <span>🚀 Startups</span>
+        <span>Creotix</span>
+        <span>Orbit AI</span>
+      </div>
+      <div class="marquee-content" aria-hidden="true">
+        <span>🤖 AI Solutions</span>
+        <span>⚡ n8n Automation</span>
+        <span>📦 SaaS Products</span>
+        <span>🌐 Web & Apps</span>
+        <span>🦾 Robotics</span>
+        <span>🎨 UI/UX Design</span>
+        <span>🚀 Startups</span>
+        <span>Creotix</span>
+        <span>Orbit AI</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about section" id="about">
+    <div class="container about-grid">
+      <div class="about-photo reveal">
+        <div class="photo-frame">
+          <img src="nitish.jpg" alt="Nitish Chaurasia" />
+          <div class="photo-border-decor"></div>
+        </div>
+        <div class="photo-badge">
+          <span class="badge-number">3+</span>
+          <span class="badge-label">Yrs Experience</span>
+        </div>
+      </div>
+
+      <div class="about-text reveal">
+        <span class="section-label">— Who I Am</span>
+        <h2 class="section-heading">Building things<br /><em>that matter.</em></h2>
+        <p>I'm Nitish Chaurasia — an AI Generalist and entrepreneur who thrives at the intersection of technology and product thinking. I don't just write code; I build systems that move the needle.</p>
+        <p>My work spans building <strong>AI agents and chatbots</strong>, designing complex <strong>n8n automation workflows</strong>, shipping <strong>SaaS products</strong>, developing <strong>mobile and web applications</strong>, and tinkering with <strong>hardware and robotics</strong>.</p>
+        <p>I think in products, execute in sprints, and believe the best things are built with obsession and taste. Whether it's a WhatsApp AI agent handling orders at 3am or a full SaaS platform, I treat every project like it's my own.</p>
+
+        <div class="interest-tags">
+          <span class="interest-pill">🤖 AI & Agents</span>
+          <span class="interest-pill">⚡ Automation</span>
+          <span class="interest-pill">🎵 Music</span>
+          <span class="interest-pill">⚽ Sports</span>
+          <span class="interest-pill">🦾 Robotics</span>
+          <span class="interest-pill">🚀 Startups</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services section" id="services">
+    <div class="container">
+      <h2 class="section-heading reveal">Services &<br /><em>capabilities.</em></h2>
+      <div class="services-grid reveal">
+        <div class="service-card">
+          <span class="service-icon">🤖</span>
+          <h3>AI Solutions & Agents</h3>
+          <p>Custom AI agents, chatbots, and intelligent systems that automate real business workflows end-to-end.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">⚡</span>
+          <h3>n8n Automation</h3>
+          <p>Complex multi-step automations that connect your tools, eliminate manual work, and scale operations.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">📦</span>
+          <h3>SaaS Development</h3>
+          <p>Full-stack SaaS products from idea to launch — auth, billing, dashboards, and everything in between.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">📱</span>
+          <h3>App Development</h3>
+          <p>Cross-platform mobile apps with clean UX, real-time data, and seamless native performance.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🌐</span>
+          <h3>Website Development</h3>
+          <p>High-performance websites that convert — fast, SEO-optimized, and pixel-perfect on every device.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🦾</span>
+          <h3>Hardware & Robotics</h3>
+          <p>IoT prototypes, Arduino/RPi builds, and custom hardware solutions from sensor to cloud.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🎨</span>
+          <h3>UI/UX Design</h3>
+          <p>Thoughtful interfaces with design systems, prototypes, and flows that users genuinely enjoy.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🚀</span>
+          <h3>Product Strategy</h3>
+          <p>From market research to MVP scoping — strategic thinking that turns ideas into shipped products.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <h2 class="section-heading reveal">Selected<br /><em>projects.</em></h2>
+
+      <div class="filter-pills reveal">
+        <button class="filter-pill active" data-filter="all">All</button>
+        <button class="filter-pill" data-filter="ai">AI</button>
+        <button class="filter-pill" data-filter="automation">Automation</button>
+        <button class="filter-pill" data-filter="saas">SaaS</button>
+        <button class="filter-pill" data-filter="web">Web</button>
+        <button class="filter-pill" data-filter="app">App</button>
+        <button class="filter-pill" data-filter="robotics">Robotics</button>
+      </div>
+
+      <div class="projects-grid reveal" id="projectsGrid">
+
+        <div class="project-card featured" data-category="ai automation">
+          <div class="project-header">
+            <span class="project-num">01</span>
+            <span class="project-cat">AI · Automation</span>
+          </div>
+          <h3 class="project-title">WhatsApp Order Booking Agent</h3>
+          <p class="project-desc">Fully autonomous WhatsApp AI agent that takes orders, confirms details, handles FAQs, and logs everything to a backend — zero human intervention needed.</p>
+          <div class="project-tags">
+            <span>n8n</span><span>OpenAI</span><span>WhatsApp API</span><span>Webhook</span><span>Node.js</span>
+          </div>
+        </div>
+
+        <div class="project-card featured" data-category="saas">
+          <div class="project-header">
+            <span class="project-num">02</span>
+            <span class="project-cat">SaaS</span>
+          </div>
+          <h3 class="project-title">BizDeck</h3>
+          <p class="project-desc">Invoice manager SaaS for small businesses — create, send, and track invoices, manage clients, and get paid faster with automated payment reminders.</p>
+          <div class="project-tags">
+            <span>Next.js</span><span>Supabase</span><span>Stripe</span><span>React</span><span>Prisma</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="app saas">
+          <div class="project-header">
+            <span class="project-num">03</span>
+            <span class="project-cat">App · SaaS</span>
+          </div>
+          <h3 class="project-title">FrictionlessFocus</h3>
+          <p class="project-desc">Productivity app that eliminates distractions and keeps you in deep work — smart session blocking, focus analytics, and habit tracking.</p>
+          <div class="project-tags">
+            <span>React Native</span><span>Node.js</span><span>Supabase</span><span>OpenAI</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="web">
+          <div class="project-header">
+            <span class="project-num">04</span>
+            <span class="project-cat">Web</span>
+          </div>
+          <h3 class="project-title">Towing Business Website</h3>
+          <p class="project-desc">High-converting website for a towing business — fast load, SEO optimized, live availability indicator, and one-tap call CTA.</p>
+          <div class="project-tags">
+            <span>Next.js</span><span>Tailwind</span><span>Google Maps API</span><span>Vercel</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="app">
+          <div class="project-header">
+            <span class="project-num">05</span>
+            <span class="project-cat">App</span>
+          </div>
+          <h3 class="project-title">FlexiTrack</h3>
+          <p class="project-desc">Fitness progress tracker — log workouts, track PRs, visualize strength gains, and get AI-suggested next sessions based on your history.</p>
+          <div class="project-tags">
+            <span>React Native</span><span>Supabase</span><span>OpenAI</span><span>Charts.js</span><span>Expo</span>
+          </div>
+        </div>
+
+        <div class="project-card featured" data-category="app ai">
+          <div class="project-header">
+            <span class="project-num">06</span>
+            <span class="project-cat">App · AI</span>
+          </div>
+          <h3 class="project-title">CoreCare</h3>
+          <p class="project-desc">Medical document simplifier — scan prescriptions, reports, and diagnoses, get plain-language explanations, and receive AI-guided suggestions.</p>
+          <div class="project-tags">
+            <span>React Native</span><span>OpenAI Vision</span><span>OCR</span><span>FastAPI</span><span>Python</span>
+          </div>
+        </div>
+
+        <div class="project-card featured" data-category="saas">
+          <div class="project-header">
+            <span class="project-num">07</span>
+            <span class="project-cat">SaaS</span>
+          </div>
+          <h3 class="project-title">QwikINK</h3>
+          <p class="project-desc">Online printing SaaS — upload designs, configure print specs, get instant quotes, place bulk orders, and track production status in real time.</p>
+          <div class="project-tags">
+            <span>Next.js</span><span>Stripe</span><span>Supabase</span><span>React</span><span>Node.js</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="saas">
+          <div class="project-header">
+            <span class="project-num">08</span>
+            <span class="project-cat">SaaS</span>
+          </div>
+          <h3 class="project-title">ServeLink</h3>
+          <p class="project-desc">Restaurant management SaaS — digital menus, table-side ordering, kitchen display integration, and real-time analytics for owners.</p>
+          <div class="project-tags">
+            <span>React</span><span>Node.js</span><span>Socket.io</span><span>PostgreSQL</span><span>Stripe</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="web">
+          <div class="project-header">
+            <span class="project-num">09</span>
+            <span class="project-cat">Prototype · UI/UX</span>
+          </div>
+          <h3 class="project-title">Canopix</h3>
+          <p class="project-desc">A high-fidelity prototype exploring a next-gen visual collaboration tool — clean design system, interactive flows, and component-level detail.</p>
+          <div class="project-tags">
+            <span>Figma</span><span>Prototyping</span><span>Design System</span><span>UI/UX</span>
+          </div>
+        </div>
+
+        <div class="project-card featured" data-category="ai app">
+          <div class="project-header">
+            <span class="project-num">10</span>
+            <span class="project-cat">AI · App</span>
+          </div>
+          <h3 class="project-title">Safe Voyage AI</h3>
+          <p class="project-desc">AI travel companion that plans itineraries, checks safety scores, monitors advisories in real time, and tells you whether it's the right time to visit.</p>
+          <div class="project-tags">
+            <span>OpenAI</span><span>React Native</span><span>Travel APIs</span><span>LangChain</span><span>Python</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="app">
+          <div class="project-header">
+            <span class="project-num">11</span>
+            <span class="project-cat">App</span>
+          </div>
+          <h3 class="project-title">SimpleTask</h3>
+          <p class="project-desc">A no-fluff task manager built for clarity — quick add, priority sorting, deadline nudges, and a distraction-free UI.</p>
+          <div class="project-tags">
+            <span>React Native</span><span>Supabase</span><span>Expo</span><span>Tailwind</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section class="stack section" id="stack">
+    <div class="container">
+      <h2 class="section-heading reveal">My tech<br /><em>arsenal.</em></h2>
+    </div>
+    <div class="stack-marquee">
+      <div class="stack-marquee-track">
+        <div class="stack-marquee-content">
+          <div class="stack-item"><span class="stack-icon">🐍</span><span class="stack-name">Python</span></div>
+          <div class="stack-item"><span class="stack-icon">⚡</span><span class="stack-name">n8n</span></div>
+          <div class="stack-item"><span class="stack-icon">🦜</span><span class="stack-name">LangChain</span></div>
+          <div class="stack-item"><span class="stack-icon">🧠</span><span class="stack-name">OpenAI</span></div>
+          <div class="stack-item"><span class="stack-icon">⚛️</span><span class="stack-name">React</span></div>
+          <div class="stack-item"><span class="stack-icon">▲</span><span class="stack-name">Next.js</span></div>
+          <div class="stack-item"><span class="stack-icon">🟢</span><span class="stack-name">Node.js</span></div>
+          <div class="stack-item"><span class="stack-icon">🎨</span><span class="stack-name">Figma</span></div>
+          <div class="stack-item"><span class="stack-icon">⚡</span><span class="stack-name">Supabase</span></div>
+          <div class="stack-item"><span class="stack-icon">🌲</span><span class="stack-name">Pinecone</span></div>
+          <div class="stack-item"><span class="stack-icon">🔌</span><span class="stack-name">Arduino</span></div>
+          <div class="stack-item"><span class="stack-icon">🍓</span><span class="stack-name">Raspberry Pi</span></div>
+          <div class="stack-item"><span class="stack-icon">👁️</span><span class="stack-name">OpenCV</span></div>
+          <div class="stack-item"><span class="stack-icon">🐳</span><span class="stack-name">Docker</span></div>
+          <div class="stack-item"><span class="stack-icon">☁️</span><span class="stack-name">AWS</span></div>
+          <div class="stack-item"><span class="stack-icon">💳</span><span class="stack-name">Stripe</span></div>
+        </div>
+        <div class="stack-marquee-content" aria-hidden="true">
+          <div class="stack-item"><span class="stack-icon">🐍</span><span class="stack-name">Python</span></div>
+          <div class="stack-item"><span class="stack-icon">⚡</span><span class="stack-name">n8n</span></div>
+          <div class="stack-item"><span class="stack-icon">🦜</span><span class="stack-name">LangChain</span></div>
+          <div class="stack-item"><span class="stack-icon">🧠</span><span class="stack-name">OpenAI</span></div>
+          <div class="stack-item"><span class="stack-icon">⚛️</span><span class="stack-name">React</span></div>
+          <div class="stack-item"><span class="stack-icon">▲</span><span class="stack-name">Next.js</span></div>
+          <div class="stack-item"><span class="stack-icon">🟢</span><span class="stack-name">Node.js</span></div>
+          <div class="stack-item"><span class="stack-icon">🎨</span><span class="stack-name">Figma</span></div>
+          <div class="stack-item"><span class="stack-icon">⚡</span><span class="stack-name">Supabase</span></div>
+          <div class="stack-item"><span class="stack-icon">🌲</span><span class="stack-name">Pinecone</span></div>
+          <div class="stack-item"><span class="stack-icon">🔌</span><span class="stack-name">Arduino</span></div>
+          <div class="stack-item"><span class="stack-icon">🍓</span><span class="stack-name">Raspberry Pi</span></div>
+          <div class="stack-item"><span class="stack-icon">👁️</span><span class="stack-name">OpenCV</span></div>
+          <div class="stack-item"><span class="stack-icon">🐳</span><span class="stack-name">Docker</span></div>
+          <div class="stack-item"><span class="stack-icon">☁️</span><span class="stack-name">AWS</span></div>
+          <div class="stack-item"><span class="stack-icon">💳</span><span class="stack-name">Stripe</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey Section -->
+  <section class="journey section" id="journey">
+    <div class="container">
+      <h2 class="section-heading reveal">The<br /><em>journey.</em></h2>
+      <div class="timeline">
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2026 – Present</span>
+            <h3 class="timeline-role">Founder & AI Generalist</h3>
+            <span class="timeline-company">Independent / Creotix</span>
+            <p>Building AI-powered products, shipping SaaS tools, and consulting for businesses on automation and intelligent systems. Leading projects end-to-end from ideation to deployment.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024 – 2026</span>
+            <h3 class="timeline-role">Product Developer & Automation Engineer</h3>
+            <span class="timeline-company">Freelance / Multiple Ventures</span>
+            <p>Designed and shipped full-stack products, built complex n8n automation workflows, and developed AI integrations for startups and small businesses.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2022 – 2024</span>
+            <h3 class="timeline-role">UI/UX Designer & Frontend Developer</h3>
+            <span class="timeline-company">Freelance</span>
+            <p>Crafted pixel-perfect interfaces and design systems in Figma, built responsive frontends with React, and developed a keen eye for user experience.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2020 – 2022</span>
+            <h3 class="timeline-role">Hardware & IoT Tinkerer</h3>
+            <span class="timeline-company">Self-taught / Projects</span>
+            <p>Started with Arduino and Raspberry Pi, building sensor networks, robotic prototypes, and IoT projects. This is where the engineering obsession began.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beyond Work Section -->
+  <section class="beyond section" id="beyond">
+    <div class="container">
+      <h2 class="section-heading reveal">The human<br /><em>side.</em></h2>
+      <div class="beyond-grid reveal">
+        <div class="beyond-card beyond-music">
+          <span class="beyond-watermark">♪</span>
+          <div class="beyond-card-content">
+            <h3>Music 🎵</h3>
+            <p>Music is where I recharge creativity. From lo-fi beats while coding to discovering new genres — rhythm keeps the ideas flowing.</p>
+          </div>
+        </div>
+        <div class="beyond-card beyond-sports">
+          <span class="beyond-watermark">⚽</span>
+          <div class="beyond-card-content">
+            <h3>Sports ⚽</h3>
+            <p>Sports taught me discipline, teamwork, and how to push through when it gets tough. The same mindset I bring to building products.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact section" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <span class="section-label">— Get In Touch</span>
+        <h2 class="section-heading">Got an idea?<br />Let's <strong>build it.</strong></h2>
+        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of something great. Let's connect and create impact together.</p>
+
+        <div class="social-links">
+          <a href="#" class="social-link" target="_blank" rel="noopener">
+            <span class="social-icon">💼</span>
+            <span class="social-name">LinkedIn</span>
+          </a>
+          <a href="#" class="social-link" target="_blank" rel="noopener">
+            <span class="social-icon">🐙</span>
+            <span class="social-name">GitHub</span>
+          </a>
+          <a href="#" class="social-link" target="_blank" rel="noopener">
+            <span class="social-icon">🐦</span>
+            <span class="social-name">Twitter / X</span>
+          </a>
+          <a href="#" class="social-link" target="_blank" rel="noopener">
+            <span class="social-icon">📸</span>
+            <span class="social-name">Instagram</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap reveal">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">NAME</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">MESSAGE</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your idea…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit">Send It →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#" class="footer-logo">NC<span class="logo-dot">.</span></a>
+      <p class="footer-tagline"><em>Build smart. Ship fast. Create impact.</em></p>
+      <p class="footer-copy">&copy; 2026 Nitish Chaurasia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
