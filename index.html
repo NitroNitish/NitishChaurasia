@@ -502,8 +502,11 @@
       </div>
 
       <div class="contact-form-wrap reveal">
-        <form class="contact-form" id="contactForm">
-          <div class="form-group">
+        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+          <input type="hidden" name="subject" value="New Lead from Portfolio — Nitish Chaurasia" />
+          <input type="hidden" name="from_name" value="Portfolio Website" />
+          <input type="checkbox" name="botcheck" style="display: none;" />          <div class="form-group">
             <label for="name">NAME</label>
             <input type="text" id="name" name="name" placeholder="Your name" required />
           </div>

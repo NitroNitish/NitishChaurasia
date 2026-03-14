@@ -164,20 +164,42 @@
     });
   });
 
-  // ---- Contact Form (UI only) ----
+  // ---- Contact Form (Web3Forms) ----
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = contactForm.querySelector('.btn-submit');
       const originalText = btn.textContent;
-      btn.textContent = 'Sent! ✓';
-      btn.style.background = 'linear-gradient(135deg, var(--accent-teal), #00E676)';
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      try {
+        const formData = new FormData(contactForm);
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          btn.textContent = 'Sent! ✓';
+          btn.style.background = 'linear-gradient(135deg, var(--accent-teal), #00E676)';
+          contactForm.reset();
+        } else {
+          btn.textContent = 'Error — Try Again';
+          btn.style.background = 'linear-gradient(135deg, var(--accent-red), #FF4444)';
+        }
+      } catch (err) {
+        btn.textContent = 'Error — Try Again';
+        btn.style.background = 'linear-gradient(135deg, var(--accent-red), #FF4444)';
+      }
+
       setTimeout(() => {
         btn.textContent = originalText;
         btn.style.background = '';
-        contactForm.reset();
-      }, 2500);
+        btn.disabled = false;
+      }, 3000);
     });
   }
 

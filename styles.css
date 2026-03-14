@@ -843,14 +843,17 @@ input, textarea { font-family: inherit; }
 .stack-marquee {
   overflow: hidden;
   padding: 20px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
 }
 
 .stack-marquee-track {
   display: flex;
   width: max-content;
   animation: stackMarqueeScroll 30s linear infinite;
+  will-change: transform;
+}
+
+.stack-marquee-track:hover {
+  animation-play-state: paused;
 }
 
 .stack-marquee-content {
@@ -861,7 +864,8 @@ input, textarea { font-family: inherit; }
 }
 
 @keyframes stackMarqueeScroll {
-  to { transform: translateX(-50%); }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .stack-item {
@@ -878,9 +882,8 @@ input, textarea { font-family: inherit; }
   flex-shrink: 0;
 }
 
-.stack-item:hover {
+.stack-marquee .stack-item:hover {
   border-color: var(--accent-purple);
-  transform: translateY(-3px);
   background: rgba(123, 94, 167, 0.08);
 }
 
