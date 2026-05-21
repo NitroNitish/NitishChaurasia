@@ -30,7 +30,7 @@
     animateRing();
 
     // Enlarge on interactive elements
-    const interactives = document.querySelectorAll('a, button, .project-card, .service-card, .stack-item, .social-link, input, textarea');
+    const interactives = document.querySelectorAll('a, button, .project-card, .service-card, .stack-item, .cert-item, .social-link, input, textarea');
     interactives.forEach((el) => {
       el.addEventListener('mouseenter', () => {
         dot.style.width = '20px';

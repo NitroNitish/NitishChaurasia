@@ -44,6 +44,7 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
+a.project-card { display: flex; }
 img { max-width: 100%; display: block; }
 button { cursor: none; font-family: inherit; }
 input, textarea { font-family: inherit; }
@@ -903,10 +904,78 @@ input, textarea { font-family: inherit; }
 }
 
 /* =============================================
+   CERTIFICATIONS SECTION
+   ============================================= */
+.certifications {
+  background: var(--section-dark);
+}
+
+.cert-marquee {
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.cert-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: certMarqueeScroll 25s linear infinite;
+  will-change: transform;
+}
+
+.cert-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.cert-marquee-content {
+  display: flex;
+  gap: 32px;
+  padding: 0 16px;
+  flex-shrink: 0;
+}
+
+@keyframes certMarqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.cert-item {
+  width: 320px;
+  height: 220px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.cert-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  border-radius: 4px;
+}
+
+.cert-marquee .cert-item:hover {
+  border-color: var(--accent-teal);
+  box-shadow: 0 10px 30px rgba(0, 201, 167, 0.08);
+  transform: translateY(-5px);
+}
+
+.cert-item:hover img {
+  transform: scale(1.03);
+}
+
+/* =============================================
    JOURNEY / TIMELINE
    ============================================= */
 .journey {
-  background: var(--section-dark);
+  background: var(--bg);
 }
 
 .timeline {
@@ -938,7 +1007,7 @@ input, textarea { font-family: inherit; }
   width: 18px; height: 18px;
   background: var(--accent-purple);
   border-radius: 50%;
-  border: 3px solid var(--section-dark);
+  border: 3px solid var(--bg);
   box-shadow: 0 0 0 3px rgba(123, 94, 167, 0.3);
 }
 
@@ -978,7 +1047,7 @@ input, textarea { font-family: inherit; }
    BEYOND WORK
    ============================================= */
 .beyond {
-  background: var(--bg);
+  background: var(--section-dark);
 }
 
 .beyond-grid {
@@ -1209,12 +1278,6 @@ input, textarea { font-family: inherit; }
 .reveal-left.visible {
   opacity: 1;
   transform: translate(0, 0);
-}
-
-/* stagger children inside visible reveal */
-.reveal.visible > *,
-.reveal-left.visible > * {
-  /* handled via JS for per-child delays */
 }
 
 /* =============================================
