@@ -640,6 +640,8 @@ input, textarea { font-family: inherit; }
   align-items: center;
   font-family: 'Outfit', sans-serif;
   color: white;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
 }
 
 .footer-bg-text {
@@ -668,19 +670,6 @@ input, textarea { font-family: inherit; }
   text-transform: uppercase;
 }
 
-.footer-center-box {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background: white;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2), inset 0 0 0 4px rgba(13, 110, 253, 0.1);
-  z-index: 10;
-}
-
 .footer-bottom-indicator {
   position: absolute;
   bottom: 24px;
@@ -701,13 +690,5 @@ input, textarea { font-family: inherit; }
     top: 16px;
     right: 16px;
     font-size: 8px;
-  }
-  .footer-center-box {
-    width: 64px;
-    height: 64px;
-  }
-  .footer-center-box svg {
-    width: 24px;
-    height: 24px;
   }
 }
