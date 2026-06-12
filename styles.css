@@ -658,7 +658,7 @@ input, textarea { font-family: inherit; }
   .hero {
     aspect-ratio: auto;
     min-height: 100vh;
-    background-image: url('hero.png');
+    background-image: url('hero-mobile.png');
   }
 }
 
