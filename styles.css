@@ -634,9 +634,6 @@ input, textarea { font-family: inherit; }
 .footer-copy { font-family: var(--font-family-sans); font-size: 13px; color: var(--color-muted); margin-top: 24px; }
 
 /* Responsive Adjustments */
-.hidden-initial { display: none !important; }
-.view-more-container { text-align: center; margin-top: 48px; }
-
 @media (min-width: 769px) {
   .hero-content { display: none; }
 }

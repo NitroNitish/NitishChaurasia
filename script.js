@@ -117,17 +117,6 @@
     }
   }, { passive: true });
 
-  // ---- View More Projects ----
-  const viewMoreBtn = document.getElementById('viewMoreBtn');
-  if (viewMoreBtn) {
-    viewMoreBtn.addEventListener('click', () => {
-      document.querySelectorAll('.project-card.hidden-initial').forEach(card => {
-        card.classList.remove('hidden-initial');
-      });
-      viewMoreBtn.style.display = 'none';
-    });
-  }
-
   // ---- Project Filter ----
   const filterPills = document.querySelectorAll('.filter-pill');
   const projectCards = document.querySelectorAll('.project-card');
@@ -140,10 +129,7 @@
 
       const filter = pill.dataset.filter;
 
-      if (viewMoreBtn) viewMoreBtn.style.display = 'none';
-
       projectCards.forEach((card) => {
-        card.classList.remove('hidden-initial'); // unhide on filter
         const categories = card.dataset.category || '';
         if (filter === 'all' || categories.includes(filter)) {
           card.style.display = '';
