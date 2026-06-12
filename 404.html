@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found - Nitish Chaurasia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: var(--font-family-sans);
+    }
+    .error-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url('WhatsApp Image 2026-06-12 at 1.43.03 PM.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .error-container::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+      z-index: 1;
+    }
+    .error-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: var(--color-ink);
+      padding: 24px;
+    }
+    .error-title {
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: -1.5px;
+    }
+    .error-message {
+      font-size: clamp(1rem, 3vw, 1.25rem);
+      color: var(--color-body);
+      margin-bottom: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn-back {
+      font-family: var(--font-family-sans);
+      font-size: 16px;
+      font-weight: 500;
+      padding: 12px 24px;
+      background: var(--color-primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--rounded-md);
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-back:hover {
+      background: var(--color-primary-active);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <div class="error-content">
+      <h1 class="error-title">Oops!</h1>
+      <p class="error-message">It looks like this page took a wrong turn. Let's get you back on track.</p>
+      <button class="btn-back" onclick="goBack()">
+        ← Go Back
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function goBack() {
+      if (document.referrer !== '') {
+        window.history.back();
+      } else {
+        window.location.href = 'index.html';
+      }
+    }
+  </script>
+</body>
+</html>

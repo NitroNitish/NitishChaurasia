@@ -635,7 +635,7 @@ input, textarea { font-family: inherit; }
 
 /* Responsive Adjustments */
 @media (min-width: 769px) {
-  .hero-content { display: none; }
+  /* .hero-content { display: none; } - Removed to keep header text visible */
 }
 
 @media (max-width: 1024px) {
